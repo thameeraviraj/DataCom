@@ -52,7 +52,7 @@ public class ProductOptionsController : ControllerBase
         {
             productId = productId,
             optionId = optionId
-        });
+        },null);
     }
 
     [Route("{optionId:guid}")]
