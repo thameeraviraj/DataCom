@@ -22,7 +22,7 @@ public class ProductOptionsController : ControllerBase
 
     [HttpGet]
     public async Task<ProductOptions> GetOptions(Guid productId)
-    {
+    { 
         var options = await _optionService.GetByProductId(productId);
         return new ProductOptions(_mapper.Map<IEnumerable<ProductOption>>(options));
     }
@@ -60,11 +60,12 @@ public class ProductOptionsController : ControllerBase
     public async Task<IActionResult> UpdateOption(Guid productId, Guid optionId,
         [FromBody] ProductOptionRequest request)
     {
-        await EnsureOptionExistsByProductIdAndOptionId(productId, optionId);
-
-        var option = _mapper.Map<Entity.ProductOption>(request);
-        option.Id = optionId;
-
+        var option = await _optionService.FindByProductIdAndOptionIdAsync(productId, optionId);
+        if (option == null)
+        {
+            return NotFound();
+        }
+        _mapper.Map(request,option);
         await _optionService.UpdateAsync(option);
 
         return NoContent();

@@ -40,11 +40,8 @@ public class ProductOptionService : IProductOptionService
         await _optionsRepository.AddAsync(option);
     }
 
-    public async Task UpdateAsync(ProductOption newOption)
+    public async Task UpdateAsync(ProductOption option)
     {
-        var option = await EnsureAndGetOptionByIdAsync(newOption.Id);
-        _mapper.Map(newOption, option);
-        
         await _optionsRepository.UpdateAsync(option);
     }
 

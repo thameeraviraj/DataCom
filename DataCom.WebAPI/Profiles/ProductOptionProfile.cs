@@ -10,10 +10,5 @@ public class ProductOptionProfile : Profile
     {
         CreateMap<ProductOptionRequest, Entity.ProductOption>();
         CreateMap<Entity.ProductOption, ProductOption>();
-        
-        CreateMap<Entity.ProductOption, Entity.ProductOption>()
-            .ForMember(m => m.Id, opt => opt.Ignore())
-            .ForMember(m => m.ProductId, opt => opt.Ignore())
-            .ForMember(m => m.Product, opt => opt.Ignore());
     }
 }
