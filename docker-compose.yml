@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  datacom.webapi:
+    image: ${DOCKER_REGISTRY-}datacomwebapi
+    build:
+      context: .
+      dockerfile: DataCom.WebAPI/Dockerfile

@@ -10,12 +10,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8D35B23D-6
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCom.WebAPI", "DataCom.WebAPI\DataCom.WebAPI.csproj", "{F9202BA6-A896-43BC-BEC9-A400D83A5876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCom.WebAPI", "DataCom.WebAPI\DataCom.WebAPI.csproj", "{F9202BA6-A896-43BC-BEC9-A400D83A5876}"
 	ProjectSection(ProjectDependencies) = postProject
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E} = {20AB69F9-F2D3-4A68-96C3-424EC8B9406E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCom.WebAPI.Tests", "DataCom.WebAPI.Tests\DataCom.WebAPI.Tests.csproj", "{49F0F8DB-FBA5-4183-B0E5-8E577B557F86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCom.WebAPI.Tests", "DataCom.WebAPI.Tests\DataCom.WebAPI.Tests.csproj", "{49F0F8DB-FBA5-4183-B0E5-8E577B557F86}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{61DB0DF2-A9D1-49B6-BE8A-C08E9D2B5379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{49F0F8DB-FBA5-4183-B0E5-8E577B557F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F0F8DB-FBA5-4183-B0E5-8E577B557F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F0F8DB-FBA5-4183-B0E5-8E577B557F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DB0DF2-A9D1-49B6-BE8A-C08E9D2B5379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DB0DF2-A9D1-49B6-BE8A-C08E9D2B5379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DB0DF2-A9D1-49B6-BE8A-C08E9D2B5379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DB0DF2-A9D1-49B6-BE8A-C08E9D2B5379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
